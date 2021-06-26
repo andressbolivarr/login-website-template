@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayFit - Log in</title>
+    <style type="text/css">
+		*{
+			background-color: #F7F9FC;
+			margin: 0;
+            font-family:'Segoe UI'; 
+        }
+        main{
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .upside{
+            height: 94px;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+			font-size: 20px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 26.4px;
+            padding-top: 40px;
+            padding-bottom: 48px;
+        }
+        .upside > img{
+            width: 50px;
+            height: 50px;
+            max-width: 100%;
+        }
+        .upside > h4{
+            margin-top: 16px;
+            font-weight: 500;
+        }
+        .container{
+            background-color: #fff;
+            height: 354px;
+            width: 520px;
+            border: 1px solid #F0F3F7;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        }
+        form{
+            margin-top: 28px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            background-color: white;
+            color: #96a3b3;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            width: 85%;
+            height: 38px;            
+        }
+        label{
+            background-color: white;
+            color: #364a61;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+        }
+        input{
+            border: 1px solid #d1dae6;
+            border-radius: 5px;
+            color: #d1dae6;
+            margin-top: -15px;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+        .text > p{
+            font-weight: 400;
+        }
+        p{
+            background-color: white;
+            color: #364a61;
+        }
+        .button{
+            width: 85%;
+            height: 40px;
+            color: white;
+            background-color: #0F6FDE;
+            cursor: pointer;
+            font-weight: 550;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .checkbox{
+            color: rgb(4, 32, 64);
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        }
+        .a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+        }
+        .text > a{
+            margin-left: 90px;
+            text-decoration: none;
+            color: #0f6fde;
+            background-color: white;
+            transition: all ease-in-out 0.5s;
+        }
+        .text > a:hover{
+            color: #7db3f0;
+            transition: all ease-in-out 0.5s;
+        }
+        .o-form{
+            margin-top: 20px;
+            background-color: transparent;
+            font-size: 14px;
+        }
+        .o-form > button {
+            border: none;
+        }
+        .o-form > button > span{
+            color: #0F6FDE;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all ease-in-out .3s;
+        }
+        .o-form > button > span:hover, svg:hover{
+            color: #7db3f0;
+            transition: all ease-in-out .3s;
+        }
+        .downside{
+            width: 100%;
+            height: 13.2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .downside-content{
+            text-align: center;
+            width: 520px;
+            height: 10em;
+        }
+        .downside-content > span{
+            font-size: 11px;
+            font-weight: 600;
+            color: #768699;
+            background: transparent;
+            transition: all ease-in-out 0.7s;
+        }
+        .downside-content > span:hover{
+            color: aquamarine;
+            transition: all ease-in-out .7s;
+        }
+        .downside-content > svg:hover{
+            color: aquamarine;
+            transition: all ease-in-out .7s;
+        }
+        .footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .footer > img{
+            height: auto;
+            width: 85px;
+            max-width: 100%;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        .footer > .img1{
+            height: 24px;
+        }
+        .footer > .img2{
+            height: 49px;
+        }
+        .footer > .img3{
+            height: 31px;
+        }
+        .footer > .img4{
+            height: 15px;
+        }
+        svg{
+            margin-bottom: -.25em;
+        }
+        svg:hover{
+            fill: #7db3f0;
+            opacity: 1;
+            transition: all ease-in-out .7s;
+        }
+       @media only screen and (max-width:671px) and (min-width: 0px) {
+            main{
+                max-width: 100%;
+            }
+            .upside{
+                max-width: 100%;
+                height: 5em;
+            }
+            .container{
+                background-color:#F7F9FC;
+                border: none;
+                width: 90%;
+                max-width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+            .text{
+                width: 99%;
+            }
+            form,  label, .text, input, p, .checkbox, .container{
+                background-color: #F7F9FC;
+            }
+            .hide-mobile{
+                display: none;
+            }
+            .o-form{
+                margin-top: 15em;
+            }
+            .white{
+                background-color: white;
+            }
+            .a > a {
+                background-color: transparent;
+            }
+       }
+	</style>
+</head>
+<body>
+    <main>
+        <div class="upside">
+            <img src="images/payfit-logo.svg" alt="" class="payfit.logo">
+            <h4>Welcome back to PayFit!</h4>
+        </div>
+
+        <div class="container">
+            
+            <form action="submit">
+                <div class="text">
+                    <label for="">Your email address</label>
+                </div>
+                <input type="text" name="email" value="    Type your email address" class="text white">
+                <div class="text">
+                    <label for="">Password</label>
+                </div>
+                <input type="text" name="email" value="    ******  " class="text white"> 
+                <div class="text">
+                    <p><input type="checkbox" name="checkbox" class="checkbox">    Remember this device <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="#BAC8D6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"></path></svg></p>
+                </div>
+                <input type="button" name="log-button" value="Log in" class="button">
+            </form>
+            <div class="text a">
+                <a href="#"> Forgot password?</a>
+            </div>
+        </div>
+        <p class="o-form">
+            Language: <button class="select"><span id="span-select">English <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="#0F6FDE" style="transition: fill 0.2s linear 0s;"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></span></button>
+        </p>
+    </main>
+    <div class="downside hide-mobile">
+        <div class="downside-content">
+            <span>TRUSTED BY 5,000 COMPANIES</span>
+            <div class="footer">
+                <img src="images/footer-img4.png" alt="" class="img1">
+                <img src="images/footer-img3.png" alt="" class="img2">
+                <img src="images/footer-img2.png" alt="" class="img3">
+                <img src="images/footer-img1.png" alt="" class="img4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
