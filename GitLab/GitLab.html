@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitLab - Sign in </title>
+    <style>
+        *{
+            margin: 0;
+            background-color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            border-top: 1px solid #d8d8d8;
+            border: 1px solid #D8D8D8;
+            height: 40px;
+            width: 99.8%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+        main{
+            height: 40em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 20em;
+            width: 70%;
+            margin-top: -10em;
+        }
+        h1{
+            font-size: 35px;
+            line-height: 42px;
+            font-weight: 400;
+            margin-left: .9em;
+            margin-top: .6em;
+        }
+        .big{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .left-content{
+            width: auto;
+            margin-top: -18em;
+            margin-right: -.3em;
+        }
+        .left-content > p{
+            color: #888888;
+            font-size: 16px;
+            height: 48px;
+            line-height: 24px;
+            margin-left: 1.6em;
+            margin-top: .7em;
+        }
+        .left-content > ul{
+            margin-left: 2em;
+            margin-top: 1em;
+        }
+        .left-content > ul > li >  a {
+            color: #1068BF;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .left-content > ul > li{
+            font-size: 18px;
+            line-height: 27px;
+        }
+        .right-content{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-form{
+            width: auto;
+            margin-right: -8.5em;
+            height: 25em;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: -2em;
+        }
+        form{
+            height: 259px;
+            width: 370px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;  
+            border: 1px solid #dbdbdb;
+        }
+        form > input{
+            width: 90%;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border-radius: 4px;
+            border: 1px solid #868686;
+        }
+        .space{
+            height: .5em;
+            background-color: transparent;
+        }
+        form > label{
+            margin-bottom: -.7em;
+            margin-left: -18em;
+
+        }
+        .pass{
+            margin-left: -22em;
+        }
+        .iterate{
+            height: 5em;
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        input{
+            width: 93%;
+            height: 34px;
+            border: 1px solid #444;
+        }
+        .normal{
+            width: auto;
+            height: auto;
+            border: none;
+            margin-left: -1.5em;
+        }
+         .iterate {
+            height: 5em;
+            width: 100%;
+        } 
+        .textback{
+            margin-left: -6em;
+            margin-top: -.2em;
+        }
+        .iterate > a {
+            margin-right: -2em;
+        }
+        a{
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .outer-p{
+            margin-top: -1em;
+            margin-right: 1.5em;
+            font-size: 13px;
+            line-height: 19.5px;
+            text-align: left;
+            z-index: 1;
+        }
+        .sign-in{
+            background-color: #1f75cb;
+            height: 32px;
+            width: 90%;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            margin-top: -2em;
+        }
+        .col-button{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .sign-in-option{
+            border-radius: 4px;
+            margin-top: .7em;
+            border: 1px solid #dbdbdb;
+            width: 42%;
+            height: 32px;
+            margin-left: 1em;
+            margin-right: 1em;
+            text-align: center;
+        }
+        .qwe{
+            margin-left: -20em;
+            margin-top: -5em;
+        }
+        .ccdc{
+            display: flex;
+            flex-direction: row;
+            justify-content: inherit;
+            margin-top: -5em;
+            margin-left: -16em;
+        }
+        .form-sm{
+            margin-top: -5em;
+            height: 228px;
+        }
+        img{
+            height: 1rem;
+            width: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <svg width="24" height="24" class="tanuki-logo" viewbox="0 0 36 36">
+            <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
+            <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
+            <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
+            <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
+            <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
+            <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
+            <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
+          </svg>
+    </header>
+    <main>
+        <div class="container">
+            <div class="col">
+                <h1>GitLab.com</h1>
+            </div>
+            <div class="col big">
+                <div class="left-content">
+                    <p>GitLab.com offers free unlimited (private) repositories and unlimited collaborators.</p>
+                    <ul>
+                        <li><a href="#">Explore projects on GitLab.com</a> (no login needed)</li>
+                        <li><a href="">More information about GitLab.com</a></li>
+                        <li><a href="">GitLab Community Forum</a></li>
+                        <li><a href="">GitLab Homepage</a></li>
+                    </ul>
+                    <p>By signing up for and by signing in to this service you accept our:
+                    </p>
+                    <ul>
+                        <li><a href="">Privacy policy</a></li>
+                        <li><a href="">GitLab.com Terms.</a></li>
+                    </ul>
+                </div>
+                <div class="right-content">
+                    <div class="col-form">
+                        <form action="submit">
+                            <div class="space"></div>
+                            <label for="">Username or email</label>
+                            <input type="text">
+                            <label for="" class="pass">Password</label>
+                            <input type="text">
+                            <div class="iterate asd">
+                                <input type="checkbox" class="normal">
+                                <label for="normal" class="textback">Remember me</label>
+                                <a href="">Forgot your password?</a>
+                            </div>
+                            <button class="sign-in">Sign in</button>
+                        </form>
+                    </div>
+                    <p class="outer-p">Don't have an account yet?<a href="#">Register now</a></p>
+                    <div class="col-form">
+                        <form action="" class="form-sm">
+                           <p class="outer-p qwe">&nbsp Sign in with</p>
+                            <div class="col-button">
+                                <button class="sign-in-option"><img alt="Google" title="Sign in with Google" class="gl-button-icon js-lazy-loaded qa-js-lazy-loaded" src="https://gitlab.com/assets/auth_buttons/google_64-9ab7462cd2115e11f80171018d8c39bd493fc375e83202fbb6d37a487ad01908.png" loading="lazy"> <span>Google</span></button>
+                                <button class="sign-in-option"><img alt="GitHub" title="Sign in with GitHub" class="gl-button-icon js-lazy-loaded qa-js-lazy-loaded" src="https://gitlab.com/assets/auth_buttons/github_64-84041cd0ea392220da96f0fb9b9473c08485c4924b98c776be1bd33b0daab8c0.png" loading="lazy"> <span>GitHub </span></button>
+                                <button class="sign-in-option"><img alt="Twitter" title="Sign in with Twitter" class="gl-button-icon js-lazy-loaded qa-js-lazy-loaded" src="https://gitlab.com/assets/auth_buttons/twitter_64-86860edb139fb2f62fc25ef62a4213a5c8b20122fd8752ab0df09e740eb53deb.png" loading="lazy"> <span>Twitter</span></button>
+                                <button class="sign-in-option"><img alt="Bitbucket" title="Sign in with Bitbucket" class="gl-button-icon js-lazy-loaded qa-js-lazy-loaded" src="https://gitlab.com/assets/auth_buttons/bitbucket_64-267f322b8bedf1a39970bc215a2eb9e862c8c8033ff2390840607cb0e2dd0daf.png" loading="lazy"> <span>BitBucket</span></button>
+                                <button class="sign-in-option"><img alt="Salesforce" title="Sign in with Salesforce" class="gl-button-icon js-lazy-loaded qa-js-lazy-loaded" src="https://gitlab.com/assets/auth_buttons/salesforce_64-3f0cb95b231cc615e09bb96d54ccaf562d729b21f255270e03d98b17466bd61f.png" loading="lazy"> <span>Salesforce</span></button> 
+                            </div>
+                        
+                        </form>
+                    <p class="ccdc">
+                        <input type="checkbox" class="normal">
+                    <label for="checkbox"> &nbsp Remember me</label>
+                    </p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href=""></a><a href=""></a><a href=""></a>
+        </div>
+    </footer>
+</body>
+</html>
