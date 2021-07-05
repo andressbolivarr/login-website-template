@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Web Services - Sign in</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: transparent;
+        }
+        .container{
+            line-height: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        b{
+            margin-top: -15px;
+            font-size:22px;
+            color: #444444;
+            margin-bottom: 15px;
+        }
+        .logo-container{
+            margin-top: 30px;
+            margin-bottom: 40px;
+            height: 60px;
+            width: 65%;
+        }
+        .logo-container > img{
+            width: 83px;
+            height: 50px;
+            max-width: 100%;
+        }
+        label{
+            color: #444;
+        }
+        .inner-container{
+            width: 65%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .left-content{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+        }
+        .sign-in-selection1{
+            height: 75px;
+            line-height: 18px;
+            width: 82%;
+            border: 1px solid #CCCCCC;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            color: #444444;
+        }
+        .sign-in-selection2{
+            height: 75px;
+            color: #444444;
+            line-height: 18px;
+            width: 82%;
+            border: 1px solid #CCCCCC;
+            margin-bottom: 10px;
+            border-radius: 2px;
+        }
+        .sign-in-text{
+            display: flex;
+            align-items: right;
+            justify-content: right;
+        }
+        .sign-in-text > span{
+            width: 85%;
+            margin-top: .50em;
+            margin-left: 2.225em;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .sign-in-text > label, input{
+            margin-top: .75em;
+            margin-left: .75em;
+        }
+        .sign-in-option{
+            width: 80%;
+            margin-left: -1px;
+            height: 32px;
+            border: 1px solid #CCCCCC;
+            color: #444;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            font-style: italic;
+        }
+        .next{
+            height: 31px;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            text-shadow: rgba(0, 0, 0, .75) 0px 1px 1px;
+            width: 82%;
+            background-color: #1166BB;
+            border-radius: 4px;
+            border-top: 1px solid #1166BB;
+            box-shadow: 1px solid #0B4075;
+            border-bottom: 1px solid #0B4075;
+            border-left: 1px solid #0B4075;
+            padding: 4px 14px 4px 14px;
+            margin-bottom: 17px;
+        }
+        .sign-in-sm-text{
+            font-size: 12px;
+            width: 80%;
+            line-height: 18px;
+            font-weight: 400;
+            color: #444444;
+        }
+        .sign-in-break-wrapper{
+            width: 80%;
+            font-size: 14px;
+            line-height: 28px;
+            color: #999;
+            text-align: center;
+            margin: 10px 0px;
+        }
+        a{
+            color: #3388dd;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .create-account{
+            width: 80%;
+            background-color: #dedede;
+            border-right: 1px solid #b8b8b8;
+            border-left: 1px solid #b8b8b8;
+            border-bottom: 1px solid #b8b8b8;
+        }
+        .right-content{
+            width: 60%;
+        }
+        .sign-in-selection1:hover, .sign-in-selection2:hover{
+            border: 1px solid #3388dd;
+            background-color: #F0F9FF;
+        }
+        .right-content > img{
+            height: 450px;
+            width: 570px;
+            max-width: 100%;
+        }
+        label{
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .create-account{
+            width: 80%;
+            height: 30px;
+            border: 1px solid #444;
+            border-radius: 2px;
+        }
+        footer{
+            color: #444444;
+            margin-top: 2em;
+            height: auto;
+            width: 65%;
+        }
+        .footer-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/AWS-logo.png" alt="">
+            </div>
+
+
+            <div class="inner-container">
+                <div class="left-content">
+                    <b>Sign in</b>
+                    <div class="sign-in-selection1">
+                        <input type="radio" name="sign-in-selection"  onclick="show" checked > <label for="radio">Root User</label>
+                        <div class="sign-in-text">
+                            <span>Account owner that performs tasks requiring unrestricted access. <a href="#">Learn more </a></span>
+                        </div>
+                    </div>
+                    <div class="sign-in-selection2">
+                        <input type="radio" name="sign-in-selection" onclick="show2"> <label for="">IAM User</label>
+                        <div class="sign-in-text">
+                            <span> User within an account that performs daily tasks. <a href="#">Learn more</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="sign-in" id="sign-in1">
+                        <label for="sign-in-option">Root user email address</label>
+                        <input type="text" class="sign-in-option" value="   username@example.com">
+                    </div>
+
+                    <div class="sign-in" id="sign-in2">
+                        <label for="sign-in-option">Account ID (12 digits) or account alias</label>
+                        <input type="text" class="sign-in-option">
+                    </div>
+
+
+                    <button class="next">Next</button>
+                    <div class="sign-in-sm-text"><span>By continuing, you agree to the<a href="#">AWS Customer Agreement</a>or other agreement for AWS services, and the <a href="#">Privacy Notice</a>This site uses essential cookies. See our<a href="#">Cookie Notice</a>for more information.</span></div>
+                
+                <div class="sign-in-break-wrapper">-------------- New to AWS? -------------</div>
+                <button class="create-account">Create a new AWS account</button>
+            </div>
+                <div class="right-content">
+                    <img src="images/AWS-img.png" alt="">
+                </div>
+            
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <span>© 2021, Amazon Web Services, Inc. or its affiliates. All rights reserved.</span>
+                    <button class="language">English</button>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script>
+        function show(){
+            document.getElementById('sign-in1').style.display ='none';
+        }
+        function show2(){
+            document.getElementById('sign-in2').style.display ='block';
+        }
+    </script>
+</body>
+</html>
